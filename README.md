@@ -24,13 +24,14 @@ Right now its pretty hardcoded, as I had to take a lot of code out which I'm not
 At the time of development (and writing this), PlayReady wasn't officially supported on HTML5 video, on the PC/Mac atleast.
 MS have demonstrated it, and hope it'll be on its way soon.
 
-## The good parts
+### The good parts
 - Follows MV* convention
 - Silverlight player is a directive (!)
 - Lets you manage the backend services (and switch between them) (http://{site}/api/manage)
 - Services manager uses an sqlite db, so no setup, just pull and run on any web server. Do setup permissions though.
+- Responsive webdesign (minus Silverlight)
 
-## The bad parts
+### The bad parts
 - Management interface code is some old stuff I wrote a long time ago, its not MV* or well written. It does work though
 - Had to hardcode due to some proprietary bits
 
