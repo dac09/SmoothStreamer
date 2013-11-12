@@ -32,7 +32,7 @@
 
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
-            <span class="icon-bar">          <a class="brand" href="index.php"><img class="logo" src="img/vm-logo.png"></a></span>
+            <span class="icon-bar">          <a class="brand" href="index.php"><img class="logo" style="width: 100px"src="img/top_logo.png"></a></span>
             <span class="icon-bar"></span>
           </a>
           <div class="nav-collapse collapse">
@@ -48,7 +48,7 @@
     <div class="container wrapper">
     <div class="row">
 
-      <div class="page-header" style="text-align:center"><h1>Adrenaline Instance Management</h1></div>
+      <div class="page-header" style="text-align:center"><h1>Backend Webservice Management</h1></div>
       <?php
       include('class/class.ResourceDatabase.php');
       $CurrentDB = new ResourceDatabase();
