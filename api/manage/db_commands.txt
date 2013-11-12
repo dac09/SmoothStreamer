@@ -1,0 +1,11 @@
+CREATE DATABASE resources;
+
+USE resources;
+
+CREATE TABLE routers (id int NOT NULL AUTO_INCREMENT, model varchar(30), serialno varchar(30), location varchar(30), vendor varchar(30), PRIMARY KEY(id));
+
+INSERT INTO routers (model, serialno, location, vendor)
+VALUES ('2', 'srn002', 'Langley', 'Cisco');
+
+INSERT INTO routers (model, serialno, location, vendor) VALUES ('1', 'srn001', 'Knowsley', 'Arris');
+

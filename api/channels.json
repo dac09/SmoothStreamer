@@ -1,0 +1,84 @@
+{
+    "Channels": {
+        "resultCount": 10,
+        "Channel": [
+            {
+                "id": "1",
+                "LongName": "BBC One",
+                "Pictures": {
+                    "Picture": [
+                        {
+                            "Value": "api/img/bbc_one.gif",
+                            "type": "LogoHorizontal"
+                        }
+                    ]
+                }
+            },
+                       {
+                "id": "2222",
+                "LongName": "BBC Two",
+                "Pictures": {
+                    "Picture": [
+                        {
+                            "Value": "api/img/bbc_two.gif",
+                            "type": "LogoHorizontal"
+                        }
+                    ]
+                }
+            },
+                       {
+                "id": "33333",
+                "LongName": "ITV",
+                "Pictures": {
+                    "Picture": [
+                        {
+                            "Value": "api/img/itv.gif",
+                            "type": "LogoHorizontal"
+                        }
+                    ]
+                }
+            },
+                                   {
+                "id": "4343",
+                "LongName": "Sample Channel",
+                "Pictures": {
+                    "Picture": [
+                        {
+                            "type": "LogoHorizontal"
+                        }
+                    ]
+                }
+            },
+                                   {
+                "id": "5454",
+                "LongName": "Sample Channel 2"
+            },
+
+                                   {
+                "id": "66222",
+                "LongName": "Sample Channel 3"
+            },
+
+                                   {
+                "id": "1242135",
+                "LongName": "Sample Channel 4"
+            },
+
+                                   {
+                "id": "12462346",
+                "LongName": "Sample Channel 5"
+            },
+
+                                   {
+                "id": "12411v",
+                "LongName": "Sample Channel 6"
+            },
+
+                                   {
+                "id": "asdge",
+                "LongName": "Sample Channel 8"
+            }
+
+        ]
+    }
+}
