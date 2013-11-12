@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Daniel Choudhury" content="">
+
+  <title>Smooth Streaming Test client 2.0</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css"/>
+
+</head>
+<body ng-controller='MainCtrl'>
+<div id="wrap">
+<div id="error-area">
+   <div ng-repeat="error in errors" class="alert alert-error span6 pull-right">
+    <h3>{{error.Comment}} {{error.Status}} Error</h3>
+    <div ng-if="!error.Description.Error.InternalError">{{error.Description}}</div>
+    <strong>{{error.Description.Error.InternalError}}</strong>  {{error.Description.Error.Message}}
+    <a class="close" onclick="$('#error-area').slideUp()">×</a>  
+  </div>
+</div>
+
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">SS Client</a>
+
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active"><a href="#/">Home</a></li>
+            <li><a href="#/multi">Channel Mosaic</a></li>
+            <li><a href="#/report">Reporting</a></li>
+
+            <!--                              -->
+          </ul>
+
+          <ul  class="nav pull-right">
+            <li ><a href="." ng-click='reset()'>Reset</a></li>
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Choose Environment <b class="caret"></b></a>
+              <ul class="dropdown-menu" >
+                <li class="nav-header">Choose Adrenaline</li>
+                <li ng-repeat='instance in instances' >
+                  <a href="." ng-click="changeInstance({{instance.rowid}})">{{instance.instance}}</a>
+                </li>
+             <li class="divider"></li>
+             <li><a href="." ng-click="Adr.resetInstance()">Reset</a></li>
+
+           </ul>
+         </li>
+         <li><img class="top-logo "src="img/top_logo.png"/></li>
+       </ul>
+     </div><!--/.nav-collapse -->
+   </div>
+ </div>
+</div>
+<div class="container" ng-view></div>
+
+
+<footer>
+  <div class="container">
+    <small class="span"> <p>Smooth Streaming test player for Linear streams v2.  Daniel Choudhury &copy; 2013  </p></small>
+    <img class="pull-right footer-img" src="img/footer_logo.png"/>
+  </div>
+</footer>
+
+</div>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="lib/jquery.cookie.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+
+
+<script src="js/app.js"></script>
+<script src="js/services/session.js"></script>
+<script src="js/services/adr.js"></script>
+<script src="js/services/error.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+</body>
+</html>

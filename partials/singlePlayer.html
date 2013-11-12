@@ -1,0 +1,51 @@
+
+<div class="row-fluid">
+
+<!-- SILVERLIGHT PLAYER -->
+ <div class="span8 player" style="height:500px">
+  <ovp channelId='{{channelId}}' height="100%"></ovp>
+</div>
+
+<!-- CHANNEL LIST -->
+
+<div class="span4">
+      <input type="text" class="span12" placeholder="Filter by ID or channel name" ng-model="search.$">
+  <ul class="media-list well channel-list" style="">
+    <li class="media" ng-repeat="channel in channels | filter:search:strict">
+      <a ng-click="changeChannel({{channel.id}})">
+        <img src='http://placehold.it/60x60/' ng-src="{{channel.Pictures.Picture[0].Value}}" class="media-object pull-left channel-logo">
+      </a>
+        <div class="media-body  channel-names">
+               <a href="" ng-click="changeChannel({{channel.id}})">
+                 <div class="media-heading ">{{channel.LongName}}</div>                
+               </a>
+                 <small>ID: {{channel.id}}</small>
+        </div>
+    </li>
+  </ul> 
+</div>
+
+</div>
+
+<!-- ADDITIONAL DETAILS -->
+<div class="row">
+  <div class="span6">
+    <h3>{{currentInstance.instanceName}}</h3>
+    <table class="table">
+      <tr><td><strong>Traxis URL</strong></td><td>{{currentInstance.serverurl}}</td></tr>        
+      <tr><td><strong>User</strong></td><td>{{currentInstance.user}}</td></tr>
+      <tr><td><strong>Device</strong></td><td>{{currentInstance.device}}</td></tr>
+      <tr><td><strong>User Agent</strong></td><td>{{currentInstance.userAgent}}</td></tr>
+    </table>
+  </div>
+
+  <div class="span6">
+    <h3>Stream Details</h3>
+    <table class="table">
+      <tr><td><strong>Channel ID</strong></td><td>{{channelId}}</td></tr>
+      <tr><td><strong>Session ID</strong></td><td>{{Session.id}}</td></tr>
+      <tr><td><strong>Stream URI</strong></td><td>{{Session.Playlist.Asset[0].Value}}</td></tr>            
+    </table>
+  </div>
+
+</div>
