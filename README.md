@@ -24,6 +24,12 @@ Right now its pretty hardcoded, as I had to take a lot of code out which I'm not
 At the time of development (and writing this), PlayReady wasn't officially supported on HTML5 video, on the PC/Mac atleast.
 MS have demonstrated it, and hope it'll be on its way soon.
 
+##What does it do?
+- Gets list of channels from backend RESTFul API (currently hardcoded), displays and allows you to filter
+- Plays SmoothStreaming + PlayReady encrypted videos (there's a custom data field if you wish to use)
+- Creates a mosaic view with all the channels served by the service, to allow monitoring of channel status
+- Has a management UI http://{site}/api/manage/ , that lets you set the server and parameters for speaking to the server.
+
 ### The good parts
 - Follows MV* convention
 - Silverlight player is a directive (!)
